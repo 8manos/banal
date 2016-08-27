@@ -159,6 +159,13 @@ span span {
   display: none;
 }
 
+span.open {
+  display: block;
+  span {
+    display: block;
+  }
+}
+
 span{
   text-transform: uppercase;
   p{
