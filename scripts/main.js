@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$("a.mostrar_span").on("click",function(s){s.preventDefault(),$(this).parents("span").hasClass("open")?$(this).parents("span").removeClass("open"):$(this).parents("span").addClass("open")})});
