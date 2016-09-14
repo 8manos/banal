@@ -3,8 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.15;fill:#2F2C66;}
+	.st0{opacity:0.18;fill:#2F2C66;enable-background:new    ;}
 </style>
-<path class="st0" d="M8.7,50v-3.6l7-7.1l-7-7.1v-3.6l10.5,10.6L8.7,50z"/>
-<path class="st0" d="M33,50v-3.6l7-7.1l-7-7.1v-3.6l10.5,10.6L33,50z"/>
+<path class="st0" d="M8.7,48.2v-3.8L16,37l-7.3-7.4v-3.8l11,11.1L8.7,48.2z"/>
+<path class="st0" d="M34.2,48.2v-3.8l7.3-7.4l-7.3-7.4v-3.8l11,11.1L34.2,48.2z"/>
 </svg>
