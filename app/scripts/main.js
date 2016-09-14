@@ -40,4 +40,5 @@ $(document).ready(function(){
 			$(this).parents('span').addClass('open');
 		}
 	});
+	$('section span a').addClass('shake-slow shake-constant--hover');
 });

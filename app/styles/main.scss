@@ -35,9 +35,16 @@
 body {
   background: #fafafa;
   color: #333;
+  cursor: url('../img/cursor-default.png'), auto;
   font-family: 'mister_giacco_capsbold';
 }
+a {
+  cursor: url('../img/cursor-pointer.png'), pointer;
 
+  &:visited {
+    cursor: url('../img/cursor-pointer.png'), pointer;
+  }
+}
 .browserupgrade {
   background: #ccc;
   color: #000;
@@ -53,7 +60,6 @@ header {
   position: initial;
 
   a {
-    font-style: 'mister_giacco_mediumregular';
     text-transform: uppercase;
   }
   .redes {
@@ -61,12 +67,16 @@ header {
     box-shadow: 4px 5px rgba(45,41,105,0.55);
     margin-bottom: 13px;
     margin-right: 2px;
-    text-align: center;
     padding: 2px;
+    text-align: center;
     a{
       color: white;
       text-decoration: line-through;
       font-style: 'mister_giacco_mediumregular';
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .dw {
@@ -80,8 +90,8 @@ header {
     div {
       margin-left: 6px;
       a {
-        text-decoration: none;
         color: rgb(45, 41, 105);
+        text-decoration: none;
         font-family: 'mister_giacco_capsbold';
       }
     }
@@ -120,20 +130,19 @@ section {
   color: white;
   margin-bottom: 0.5em;
   margin-top: 0.7em;
-  padding: 5px 3px;
   position: relative;
   text-align: center;
-  width: 130px;
+  width: 215px;
 
   &:after, &:before {
-    top: 100%;
-    left: 70%;
     border: solid transparent;
     content: " ";
     height: 0;
-    width: 0;
+    left: 70%;
     position: absolute;
     pointer-events: none;
+    top: 100%;
+    width: 0;
   }
   &:after {
     border-top-color: rgb(45, 41, 105);
@@ -177,8 +186,8 @@ span{
     strong {
       color: rgb(45, 41, 105);
       font-family: 'mister_giacco_capsbold';
-      text-decoration: underline;
       font-size: 1em;}
+      text-decoration: underline;
     strong.b {
       text-decoration: none;}
     span {
@@ -187,30 +196,41 @@ span{
       font-family: 'mister_giacco_mediumregular';}
     p{
       font-family: 'mistergiaccoregular';
-      font-size: 0.7em;
-      margin-top: 5px;}
+      font-size: 0.6em;
+      font-weight: 500;
+      margin-top: 5px;
+    }
   }
+  ul {
+  list-style: none;}
+}
+
+
+@keyframes animatedBackground {
+  from { background-position: 0 99%; }
+  to { background-position: 99px 99%; }
 }
 
 ul.conteo {
-  padding-top: 1em;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  padding-left: 0;
-  padding-bottom: 1.5em;
+    animation: animatedBackground 1s linear infinite;
+    background-image: url(../img/signo.svg);
+    background-repeat: repeat-x;
+    background-size: 50px 50px;
+    margin-bottom: 4em;
+    padding-top: 4em;
+    text-align: center;
 
   li.marginr {
-    margin-right: 0.3em;
+    margin-right: 0.5em;
   }
 
   li {
     color: rgb(45, 41, 105);
     display: inline-block;
-    list-style: none;
-    letter-spacing: 10px;
     font-size: 1.8em; 
     font-family: 'mister_giacco_mediumregular';
+    list-style: none;
+    letter-spacing: 10px;
     text-decoration: none;
 
     span.append{
@@ -219,51 +239,151 @@ ul.conteo {
   }
 }
 
+.mapa img {
+  width: 100%;
+  margin: 0 auto;
+}
 section.form {
   margin-top: 4em;
   margin-bottom: 2em;
   text-align: center;
   width: 100%;
+  .rotar {
+    color: rgba(45, 41, 105,1);
+    font-size: 1.1em;
+    left: -35px;
+    letter-spacing: 1px;
+    margin-top: 6em;
+    position: absolute;
+    transform: rotate(-90deg);
+  }
   h1 {
-    font-family: 'mister_giacco_capsbold';
     color: rgba(45, 41, 105,0.55);
-    letter-spacing: 10px;
+    font-family: 'mister_giacco_capsbold';
     font-size: 2em;
+    letter-spacing: 10px;
   }
   input {
     height: 21px;
     margin-bottom: 2em;
     width: 70%;
   }
-  .botons {
-    background-color: rgb(45, 41, 105);
-    box-shadow: 4px 5px rgba(45,41,105,0.55);
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 7px 0;
 
-    .subs {
-      color: white;
-      font-family: 'mistergiaccoregular';
-      font-size: 1em;
-      text-decoration: line-through;
-      letter-spacing: 8px;
+  input#mce-EMAIL {
+    border: solid 2px;
+    border-color: rgb(45, 41, 105);
+    color: white;
+    font-family: 'mister_giacco_capsbold';
+    font-size: 1.5em;
+    height: 30px;
+    margin-bottom: 1em;
+    text-shadow: -1px -1px 0px rgba(45, 41, 105, 0.55), 1px -1px 0px rgba(45, 41, 105, 0.55), -1px 1px 0px rgba(45, 41, 105, 0.55), 1px 1px 0px rgba(45, 41, 105, 0.55) !important;
+    text-align: center;
+  }
+  .botons {
+    margin: 0 auto;
+    padding: 7px 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .subs {
+    background-color: rgb(45, 41, 105);
+    box-shadow: 10px 7px rgba(45,41,105,0.55);
+    color: white;
+    cursor: url('../img/cursor-pointer.png'), pointer;
+    font-family: 'mister_giacco_mediumregular';
+    font-size: 1.2em;
+    height: 35px;
+    letter-spacing: 8px;
+    margin: 0 auto;
+    text-decoration: line-through;
+    text-decoration-color: rgba(255,255,255,0.8) !important;
+
+    &:hover {
+      text-decoration: none;
     }
+  }
+  #mc_embed_signup div.mce_inline_error {
+    background-color: white !important;
+    color: #ff0a0a !important;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    padding: 5px 10px;
+    z-index: 1;
   }
 }
 
 footer {
   margin: 0 auto;
+  padding-top: 3em;
   text-align: center;
   a {
+  display: block;
   text-align: center;
-  display: block;}
+  vertical-align: middle;
+    img {
+      height: 100px;
+    }
+  }
+  .logog {
+    height: 27px;
+  }
+  h3 {
+    color: rgba(45, 41, 105, 0.55);
+    display: inline-block;
+    font-family: 'mistergiaccoregular';
+    font-size: 1.2em;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
+/* * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-slow
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+.shake-slow{display:inline-block;transform-origin:center center}.shake-freeze,.shake-constant.shake-constant--hover:hover,.shake-trigger:hover .shake-constant.shake-constant--hover{animation-play-state:paused}.shake-freeze:hover,.shake-trigger:hover .shake-freeze,.shake-slow:hover,.shake-trigger:hover .shake-slow{animation-play-state:running}@keyframes shake-slow{2%{transform:translate(-3px, 10px) rotate(3.5deg)}4%{transform:translate(0px, -9px) rotate(-.5deg)}6%{transform:translate(5px, 8px) rotate(3.5deg)}8%{transform:translate(8px, -2px) rotate(1.5deg)}10%{transform:translate(5px, -5px) rotate(1.5deg)}12%{transform:translate(8px, 2px) rotate(.5deg)}14%{transform:translate(1px, 4px) rotate(1.5deg)}16%{transform:translate(5px, 7px) rotate(-2.5deg)}18%{transform:translate(10px, -7px) rotate(2.5deg)}20%{transform:translate(2px, -5px) rotate(1.5deg)}22%{transform:translate(5px, -4px) rotate(-2.5deg)}24%{transform:translate(-7px, -6px) rotate(-2.5deg)}26%{transform:translate(-8px, 0px) rotate(2.5deg)}28%{transform:translate(-4px, -7px) rotate(-.5deg)}30%{transform:translate(-8px, 10px) rotate(1.5deg)}32%{transform:translate(-6px, 10px) rotate(-2.5deg)}34%{transform:translate(10px, -8px) rotate(-1.5deg)}36%{transform:translate(-7px, -4px) rotate(-2.5deg)}38%{transform:translate(9px, -2px) rotate(3.5deg)}40%{transform:translate(8px, 8px) rotate(.5deg)}42%{transform:translate(0px, -4px) rotate(1.5deg)}44%{transform:translate(7px, -7px) rotate(3.5deg)}46%{transform:translate(-4px, -3px) rotate(-1.5deg)}48%{transform:translate(9px, -4px) rotate(.5deg)}50%{transform:translate(2px, -2px) rotate(-1.5deg)}52%{transform:translate(-9px, 7px) rotate(1.5deg)}54%{transform:translate(-7px, -2px) rotate(1.5deg)}56%{transform:translate(3px, -4px) rotate(-.5deg)}58%{transform:translate(4px, 6px) rotate(2.5deg)}60%{transform:translate(-3px, 2px) rotate(.5deg)}62%{transform:translate(5px, -1px) rotate(1.5deg)}64%{transform:translate(-2px, -6px) rotate(-.5deg)}66%{transform:translate(-3px, 7px) rotate(-2.5deg)}68%{transform:translate(1px, 0px) rotate(2.5deg)}70%{transform:translate(-1px, -7px) rotate(-1.5deg)}72%{transform:translate(-7px, 5px) rotate(1.5deg)}74%{transform:translate(2px, 3px) rotate(1.5deg)}76%{transform:translate(-2px, 5px) rotate(-.5deg)}78%{transform:translate(10px, -4px) rotate(-2.5deg)}80%{transform:translate(6px, -6px) rotate(1.5deg)}82%{transform:translate(3px, 0px) rotate(2.5deg)}84%{transform:translate(-3px, -2px) rotate(-2.5deg)}86%{transform:translate(10px, -4px) rotate(.5deg)}88%{transform:translate(7px, 3px) rotate(2.5deg)}90%{transform:translate(-5px, -3px) rotate(-1.5deg)}92%{transform:translate(-4px, 3px) rotate(.5deg)}94%{transform:translate(-2px, 1px) rotate(-1.5deg)}96%{transform:translate(4px, 3px) rotate(.5deg)}98%{transform:translate(-4px, 1px) rotate(2.5deg)}0%,100%{transform:translate(0, 0) rotate(0)}}.shake-slow:hover,.shake-trigger:hover .shake-slow,.shake-slow.shake-freeze,.shake-slow.shake-constant{animation-name:shake-slow;animation-duration:5s;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+/* * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-slow
+\* * * * * * * * * * * * * * * * * * * * */
+
 
 @media screen and (min-width: 600px) {
-  footer a {
-    display: inline-block;
+  header {
+    max-width: 70%;
+    .redes a {
+      font-size: 1.3em;
+    }
+  }
+  footer {
+    a {
+    display: inline-block;}
+    h3 {
+      margin-left: 3em;
+      margin-right: 0.6em;}
+  }
+  section.form {
+    .rotar {
+      left: -38px;
+      font-size: 1.5em;
+    }
+    input#mce-EMAIL {
+      border: solid 3px;
+      border-color: rgb(45, 41, 105);
+      font-size: 3em;
+      height: 50px;
+    }
+    .subs {
+        font-size: 1.5em;
+        height: 60px;
+        letter-spacing: 25px;
+    }
   }
 }
 
@@ -271,13 +391,15 @@ footer {
 
   header {
     letter-spacing: 3px;
-    position: fixed;
-    right: 5px;
     max-width: 150px;
+    position: fixed;
     padding-bottom: 0;
+    right: 5px;
     top: 1em;
-
     .dw {
+      font-size: 1em;
+    }
+    .redes a {
       font-size: 1em;
     }
   }
@@ -288,11 +410,11 @@ footer {
     font-size: 4.2em;
   }
   ul.conteo {
-    margin-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 4.5em;
+    margin-top: 0;
 
     li.marginr {
-      margin-right: 12em;}
+      margin-right: 6em;}
     li {
       font-size: 2em;}
   }
@@ -301,10 +423,12 @@ footer {
   }
   section.form{
     margin-top: 6em;
-
+    .rotar {
+      font-size: 2.2em;
+    }
     h1{
-    letter-spacing: 0.5em;
     font-size: 4.5em;}
+    letter-spacing: 0.5em;
 
     input {
       height: 50px;
@@ -312,7 +436,25 @@ footer {
       width: 60%;
     }
     .botons {
+      box-shadow: 16px 8px rgba(45, 41, 105, 0.55);
       width: 60%;
     }
+    .subs {
+     font-size: 2.2em;
+     letter-spacing: 26px;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  ul.conteo {
+    li.marginr {
+      margin-right: 9em;}
+    li{
+      font-size: 2.4em}
+  }
+  section.form {
+    .subs {
+      font-size: 2.5em;
+      letter-spacing: 39px;}
   }
 }
