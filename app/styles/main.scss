@@ -108,6 +108,9 @@ section {
   .title {
     text-decoration: line-through;
   }
+  span div p {
+    font-size: 0.7em;
+  }
 }
 .label {
   background-color: #2d2969;
@@ -170,8 +173,7 @@ span{
     text-decoration: none !important;
     strong {
       color: rgb(45, 41, 105);
-      font-family: 'mister_giacco_capsbold';
-      font-size: 1em;}
+      font-family: 'mister_giacco_capsbold';}
       text-decoration: underline;
     strong.b {
       text-decoration: none;}
@@ -181,7 +183,7 @@ span{
       font-family: 'mister_giacco_mediumregular';}
     p{
       font-family: 'mistergiaccoregular';
-      font-size: 0.75em;
+      font-size: 0.7em;
       font-weight: 500;
       margin-top: 5px;
     }
@@ -358,6 +360,9 @@ footer {
       font-size: 1.3em;
     }
   }
+  span div p {
+    font-size: 0.6em;
+  }
   footer {
     a {
     display: inline-block;}
@@ -437,9 +442,6 @@ footer {
     .redes a {
       font-size: 1em;
     }
-  }
-  span div p {
-    font-size: 0.9em;
   }
   section {
     max-width: 90%;
