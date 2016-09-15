@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var deadline = '2016-09-15 00:00';
+	var deadline = '2016-10-16 00:00';
 
 	function getTimeRemaining(endtime){
 		
